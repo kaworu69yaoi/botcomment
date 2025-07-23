@@ -1,0 +1,8 @@
+BOT_TOKEN=6297198689:AAHk2hUDzno83M8u9fqnzrnCv3W7UVg7M-c
+MONGODB_URI=mongodb+srv://avakinlifekotik90:< FBcedxwmBXWTHHtj >@telegrambot.ve4kywd.mongodb.net/?retryWrites=true&w=majority&appName=telegramBot
+CHANNEL_ID=-1002199772392
+GROUP_ID=-1002168432690
+COMMENT_TEXT=🌺Привіт! Перед тим як писати коментарі — обовʼязково ознайомтеся з правилами! ;P
+BUTTON_RULES=https://telegra.ph/Pravila-u-chatі-Studіya-Sportu-07-12
+BUTTON_CHAT=https://t.me/JockStudioChat
+BUTTON_BOT=https://t.me/sigmamirio_bot
