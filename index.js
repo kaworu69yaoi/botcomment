@@ -1,3 +1,11 @@
+const http = require('http');
+const PORT = process.env.PORT || 3000;
+http.createServer((req, res) => {
+  res.end('Bot is running');
+}).listen(PORT, () => {
+  console.log(`Dummy server listening on port ${PORT}`);
+});
+
 const { Telegraf } = require('telegraf');
 const config = require('./config');
 const storage = require('./storage');
