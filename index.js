@@ -1,14 +1,15 @@
+const { Telegraf } = require('telegraf');
 const http = require('http');
+const config = require('./config');
+const storage = require('./storage');
+
+// Dummy HTTP server for Render.com free tier
 const PORT = process.env.PORT || 3000;
 http.createServer((req, res) => {
   res.end('Bot is running');
 }).listen(PORT, () => {
   console.log(`Dummy server listening on port ${PORT}`);
 });
-
-const { Telegraf } = require('telegraf');
-const config = require('./config');
-const storage = require('./storage');
 
 const bot = new Telegraf(config.BOT_TOKEN);
 
@@ -22,7 +23,7 @@ const bot = new Telegraf(config.BOT_TOKEN);
     // Only act in the group
     if (chatId !== config.GROUP_ID) return;
 
-    // Only on forwards from the channel
+    // Only act on forwards from the channel
     if (!msg.forward_from_chat || String(msg.forward_from_chat.id) !== config.CHANNEL_ID) return;
 
     // Handle media albums: only comment once per album
